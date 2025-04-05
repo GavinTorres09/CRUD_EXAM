@@ -1,0 +1,228 @@
+/* ADMIN PAGE STYLING */
+
+/* Profile Card Styling */
+.profile-card {
+    background: #b2cfe4;  /* Subtle light gradient */
+    color: #333;  /* Dark text color for readability */
+    border-radius: 15px;  /* Softer rounded corners */
+    padding: 30px;  /* Adjusted padding for better balance */
+    max-width: 450px;  /* Adjusted width */
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);  /* Softer shadow for a gentle floating effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    margin: auto;
+    font-family: 'Poppins', sans-serif;  /* Clean, modern font */
+    border: 1px solid #f0f1f5;  /* Light border for subtle structure */
+}
+
+/* Profile Card Hover Effect */
+.profile-card:hover {
+    transform: translateY(-6px);  /* Slight lift effect */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);  /* Enhanced shadow on hover */
+}
+
+/* Profile Card Header Styling */
+.profile-card h2 {
+    font-size: 1.75rem;  /* Medium heading size */
+    font-weight: 600;  /* Bold heading */
+    color: #333;  /* Dark color for the heading */
+    margin-bottom: 15px;
+}
+
+/* Profile Card Paragraph Styling */
+.profile-card p {
+    font-size: 1.1rem;  /* Slightly larger text for better readability */
+    color: #555;  /* Slightly lighter color for text */
+    line-height: 1.6;  /* Better line height for easy reading */
+    margin-bottom: 20px;
+}
+
+/* Button or Action Links Inside the Card */
+.profile-card a {
+    color: #fff;
+    background-color: #5c6bc0;  /* Soft blue for the button */
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Button Hover Effect */
+.profile-card a:hover {
+    background-color: #3f4a8f;  /* Darker shade of blue on hover */
+    transform: scale(1.05);  /* Slight scale effect for button */
+}
+
+/* Optional: Add subtle text animations */
+.profile-card h2, .profile-card p {
+    transition: all 0.3s ease;
+}
+
+.profile-card:hover h2, .profile-card:hover p {
+    color: #333;  /* Keep the text color dark during hover */
+}
+
+/* Profile Image Styling */
+.profile-img-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.profile-img {
+    border-radius: 50%;
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    border: 4px solid #1a4b73;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Profile Image Hover Effect */
+.profile-img:hover {
+    transform: scale(1.08);
+}
+
+/* Header (Name) Styling */
+.custom-title {
+    font-size: 2.5rem;
+    color: #1a4b73;
+    margin-bottom: 15px;
+    font-weight: 600;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Title Hover Effect */
+.custom-title:hover {
+    color: #2665a8;
+    transform: translateX(5px);
+}
+
+/* Admin Label Styling */
+.label {
+    display: inline-block;
+    background-color: #1a4b73;
+    color: #fff;
+    padding: 5px 12px;  /* Adjust padding for a more balanced look */
+    font-size: 1rem;  /* Adjust font size to fit well inside */
+    border-radius: 25px;
+    font-weight: bold;
+    max-width: 150px;  /* Optional: Add max-width to prevent stretching */
+    text-align: center;  /* Keeps the text centered */
+    white-space: nowrap;  /* Prevents the label from wrapping if the text is long */
+    overflow: hidden; /* Hides overflowing text if it exceeds max-width */
+    text-overflow: ellipsis;  /* Adds ellipsis when text overflows */
+    margin-top: 10px;
+    margin-left: auto; /* Centers the label horizontally */
+    margin-right: auto;
+}
+
+/* Admin Label Hover Effect */
+.label:hover {
+    background-color: #2665a8 ;  /* Darker blue on hover */
+    transform: scale(1.05);  /* Slightly enlarge the label on hover */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Adds a soft shadow */
+    color: #fff;  /* Ensure font color remains white on hover */
+}
+
+/* Contact Links Styling */
+.contact-info {
+    margin-top: 25px;
+}
+
+.contact-link {
+    color: #ffffff !important; /* Ensure text color stays white */
+    font-size: 1.2rem;
+    text-decoration: none;
+    display: block;
+    margin: 6px 0;
+    padding: 12px 20px; /* Increase padding for better spacing */
+    background-color: #1a4b73 !important; /* Ensure background color applies */
+    border-radius: 25px; /* More rounded corners */
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+}
+
+/* Hover Effect */
+.contact-link:hover {
+    background-color: #2665a8 !important; /* Darker blue on hover */
+    transform: scale(1.05);
+}
+
+
+/* Footer Styling */
+.footer {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #ddd;
+    padding: 10px 0;
+}
+
+/* Center the content */
+.text-center {
+    text-align: center;
+}
+
+.mt-5 {
+    margin-top: 5rem;
+}
+
+/* General Mobile Styling */
+@media (max-width: 768px) {
+    /* Profile Card Adjustments */
+    .profile-card {
+        padding: 20px;  /* Reduced padding on smaller screens */
+        max-width: 100%;  /* Full width for smaller screens */
+    }
+
+    /* Profile Image Adjustments */
+    .profile-img {
+        width: 80px;  /* Smaller image on mobile */
+        height: 80px;
+    }
+
+    /* Title Adjustments */
+    .custom-title {
+        font-size: 1.5rem;  /* Smaller title font */
+    }
+
+    /* Contact Links Adjustments */
+    .contact-info {
+        font-size: 1rem;  /* Slightly smaller font size for contact info */
+    }
+
+    /* Admin Label Adjustments */
+    .label {
+        font-size: 0.9rem;  /* Smaller label font size */
+        padding: 3px 10px;  /* Adjusted padding */
+    }
+
+    /* Button Styling Adjustments */
+    .profile-card a {
+        padding: 10px 20px;  /* Adjusted padding for buttons */
+        font-size: 0.9rem;  /* Smaller font size for buttons */
+    }
+}
+
+/* For smaller mobile devices (e.g., 480px width) */
+@media (max-width: 480px) {
+    /* Profile Image Adjustments */
+    .profile-img {
+        width: 60px;  /* Further reduced image size */
+        height: 60px;
+    }
+
+    /* Title Adjustments */
+    .custom-title {
+        font-size: 1.3rem;  /* Even smaller title font */
+    }
+
+    /* Contact Info Adjustments */
+    .contact-link {
+        font-size: 0.9rem;  /* Adjusted contact link font size */
+    }
+}

@@ -1,0 +1,236 @@
+/* USER PAGE STYLE */
+/* Modern Table Styling */
+.table-modern {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.85); /* Slightly lighter transparent white */
+    backdrop-filter: blur(8px); /* Softer blur effect */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+/* Table Header Styling with Gradient */
+.table-modern th {
+    background:  #133d65; /* Deep blue to teal blue gradient */
+    color: white;
+    text-align: left;
+    padding: 14px;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+/* Table Data Styling */
+.table-modern td {
+    padding: 14px;
+    border-bottom: 1px solid #ddd;
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Hover Effect for Table Rows */
+.table-modern tbody tr:hover {
+    background: #f1f1f1; /* Light gray background on hover */
+    transition: background 0.3s ease;
+}
+
+/* Avatar Styling */
+.avatar-img {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 2px solid #103252; /* Dark blue border */
+    padding: 2px; 
+}
+
+/* Action Buttons Styling */
+.action-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+/* Shared base styles for all action buttons */
+.action-buttons button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 16px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+/* View Button (Blue) */
+.action-buttons .btn-info {
+    background-color: #1c7ed6; /* Teal Blue */
+    color: white;
+}
+.action-buttons .btn-info:hover {
+    background-color: #1864ab; /* Darker Teal Blue */
+    transform: scale(1.05);
+}
+
+/* Edit Button (Amber) */
+.action-buttons .btn-warning {
+    background-color: #f39c12; /* Soft Amber */
+    color: #212529;
+}
+.action-buttons .btn-warning:hover {
+    background-color: #e67e22; /* Darker Amber */
+    transform: scale(1.05);
+}
+
+/* Delete Button (Red) */
+.action-buttons .btn-danger {
+    background-color: #e74c3c; /* Muted Red */
+    color: white;
+}
+.action-buttons .btn-danger:hover {
+    background-color: #c0392b; /* Darker Red */
+    transform: scale(1.05);
+}
+
+/* Icon Size Adjustment */
+.action-buttons svg {
+    font-size: 18px;
+}
+
+/* Avatar Border */
+.avatar-border {
+    border: 2px solid #103252;  
+    padding: 2px;                
+}
+
+/* add user button */
+.add-user-btn {
+    background: linear-gradient(135deg, #007bff, #0056b3); 
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px; /* Rounded corners */
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); 
+}
+
+.add-user-btn:hover {
+    background: linear-gradient(135deg, #0056b3, #003d7a); 
+    transform: translateY(-2px); 
+}
+
+.add-user-btn:active {
+    background: #003d7a; 
+    box-shadow: none;
+}
+
+/* Responsive Design for Smaller Screens */
+
+/* For Tablet Screens (max-width: 768px) */
+@media (max-width: 768px) {
+    /* Table */
+    .table-modern th, .table-modern td {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .table-modern tbody tr {
+        display: block;
+        margin-bottom: 12px;
+    }
+
+    .table-modern tbody tr td {
+        display: block;
+        width: 100%;
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    .table-modern tbody tr td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        font-weight: bold;
+    }
+
+    /* Avatar */
+    .avatar-img {
+        width: 36px;
+        height: 36px;
+    }
+
+    /* Action Buttons */
+    .action-buttons {
+        gap: 10px;
+    }
+
+    .action-buttons button {
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+
+    .action-buttons svg {
+        font-size: 16px;
+    }
+
+    /* Add User Button */
+    .add-user-btn {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+/* For Mobile Screens (max-width: 480px) */
+@media (max-width: 480px) {
+    /* Table */
+    .table-modern th, .table-modern td {
+        padding: 8px;
+        font-size: 0.8rem;
+    }
+
+    .table-modern tbody tr {
+        display: block;
+        margin-bottom: 12px;
+    }
+
+    .table-modern tbody tr td {
+        display: block;
+        width: 100%;
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    .table-modern tbody tr td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        font-weight: bold;
+    }
+
+    /* Avatar */
+    .avatar-img {
+        width: 30px;
+        height: 30px;
+    }
+
+    /* Action Buttons */
+    .action-buttons {
+        gap: 8px;
+    }
+
+    .action-buttons button {
+        font-size: 12px;
+        padding: 6px 8px;
+    }
+
+    .action-buttons svg {
+        font-size: 14px;
+    }
+
+    /* Add User Button */
+    .add-user-btn {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+}

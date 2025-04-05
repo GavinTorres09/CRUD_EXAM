@@ -1,0 +1,281 @@
+@import '~bootstrap/scss/bootstrap';
+
+/* General Page Styling */
+body {
+    background: linear-gradient(to right, #4b89b8, #103252);  /* Lighter gradient from light blue to medium blue */
+    font-family: 'Poppins', sans-serif;  /* Modern font for consistency */
+    color: #f8f9fa;  /* Softer white for better readability */
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;  /* Ensures body covers the full screen height */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Particles Background */
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: -1;  /* Keeps particles in the background */
+    pointer-events: none;  /* Ensures particles don't interfere with UI interactions */
+}
+
+/* Optional: Add some padding to the body for spacing */
+.container {
+    padding: 20px;  /* Default padding for container */
+    z-index: 1;  /* Keeps container above the background */
+}
+
+/* Optional: Add subtle transitions for all elements */
+* {
+    transition: all 0.3s ease;  /* Smooth transition effect for UI changes */
+}
+/* Navbar Styling */
+.navbar {
+    background: linear-gradient(to right, #1a3b55, #004e7c); /* Soft Navy to Dark Blue */
+    font-family: 'Poppins', sans-serif;
+    padding: 15px 30px; /* Slightly increased padding for a clean, modern look */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+}
+
+.navbar-brand {
+    color: #ffffff !important; /* White text for brand */
+    font-size: 1.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+    color: #80c1ff !important; /* Light blue when hovered */
+}
+
+.nav-logo {
+    height: 50px; /* Consistent size */
+    width: auto;
+    margin-left: auto; /* Align logo to the right */
+}
+
+.nav-logo:hover {
+    transform: scale(1.05); /* Slight scale effect */
+    opacity: 0.85; /* Keep it subtle */
+    cursor: pointer;
+}
+
+.navbar-nav .nav-item {
+    margin-left: 25px; /* Increased spacing for clarity */
+}
+
+.nav-link {
+    color: #f8f9fa !important; /* Light text for better contrast */
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-link:hover {
+    color: #80c1ff !important; /* Light blue color on hover */
+    transform: scale(1.05); /* Smooth scale effect */
+}
+
+.navbar-text {
+    color: #f8f9fa !important; /* Light color for text */
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.navbar-text:hover {
+    color: #80c1ff !important; /* Light blue when hovered */
+}
+
+.dropdown-toggle {
+    color: #f8f9fa !important; /* Light color for dropdown */
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.dropdown-toggle:hover {
+    color: #80c1ff !important; /* Light blue for hover */
+}
+
+.dropdown-menu {
+    background-color: #ffffff; /* Clean white background */
+    border: 1px solid #ddd; /* Light gray border */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.dropdown-item {
+    color: #333; /* Dark color for dropdown items */
+    font-size: 1rem;
+    padding: 10px 15px;
+}
+
+.dropdown-item:hover {
+    background-color: #f0f8ff; /* Light blue-gray background */
+    color: #007bff; /* Standard blue color */
+}
+
+.navbar-toggler-icon {
+    background-color: #f8f9fa; /* Light color for icon */
+}
+
+.navbar-light .navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.navbar-nav .nav-link.active {
+    color: #007bff !important; /* Active link blue */
+    font-weight: 600;
+}
+
+.navbar-toggler {
+    border-color: #007bff; /* Blue border for toggler */
+}
+
+.navbar-collapse {
+    transition: max-height 0.35s ease;
+}
+
+/* Disabled NavLink Styling */
+.nav-link[disabled] {
+    color: #6c757d !important; /* Disabled text color */
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+.nav-link[disabled]:hover {
+    color: #6c757d !important;
+    text-decoration: none;
+}
+
+
+// PAGINATION STYLING
+
+  .custom-pagination-btn {
+    background-color: #115978; /* Primary color */
+    color: white;
+    border: none;
+    padding: 8px 15px; /* Better spacing */
+    border-radius: 5px; /* Smooth edges */
+    transition: all 0.2s ease-in-out; /* Smooth hover effect */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15); /* Subtle depth */
+}
+
+.custom-pagination-btn:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+.custom-pagination-btn:active {
+    background-color: #003d7a; /* Even darker for click effect */
+    box-shadow: none; /* Removes shadow when clicked */
+}
+
+.custom-pagination-btn.active {
+    background-color: #007bff; /* Highlight active page */
+    font-weight:bold
+}
+
+
+/* mobile responsiveness */
+@media (max-width: 992px) {
+    /* Navbar */
+    .navbar {
+        padding: 10px 20px;  /* Reduced padding for smaller screens */
+    }
+
+    .navbar-brand {
+        font-size: 1.5rem;  /* Smaller font for the brand */
+    }
+
+    .navbar-nav .nav-item {
+        margin-left: 15px;  /* Reduced spacing for nav items */
+    }
+
+    .nav-link {
+        font-size: 1rem;  /* Smaller font size for nav links */
+    }
+
+    .nav-logo {
+        height: 40px;  /* Adjust logo size */
+    }
+}
+
+/* Tablet and Smaller Screens (max-width: 768px) */
+@media (max-width: 768px) {
+    /* Navbar */
+    .navbar {
+        padding: 10px 15px;  /* Further reduce padding */
+    }
+
+    .navbar-brand {
+        font-size: 1.5rem;  /* Adjust brand font size */
+    }
+
+    .navbar-nav {
+        flex-direction: column;  /* Stack nav items vertically */
+        margin-top: 10px;  /* Add some space between navbar and content */
+    }
+
+    .navbar-nav .nav-item {
+        margin-left: 0;
+        margin-top: 10px;  /* Space between navbar items */
+    }
+
+    .nav-link {
+        font-size: 1rem;  /* Smaller font for mobile devices */
+    }
+
+    .nav-logo {
+        height: 30px;  /* Further adjust logo size */
+    }
+
+    /* Pagination */
+    .custom-pagination-btn {
+        padding: 6px 12px;  /* Adjust button size */
+        font-size: 0.9rem;  /* Smaller font */
+    }
+}
+
+/* For Smaller Mobile Devices (max-width: 480px) */
+@media (max-width: 480px) {
+    /* General Adjustments */
+    body {
+        padding: 10px;  /* Padding for smaller screens */
+    }
+
+    /* Navbar */
+    .navbar {
+        padding: 8px 12px;  /* Further reduce navbar padding */
+    }
+
+    .navbar-brand {
+        font-size: 1.2rem;  /* Smaller brand font */
+    }
+
+    .nav-link {
+        font-size: 0.9rem;  /* Smaller font for nav links */
+    }
+
+    .navbar-nav .nav-item {
+        margin-left: 0;
+        margin-top: 5px;  /* Reduce space between nav items */
+    }
+
+    .nav-logo {
+        height: 25px;  /* Adjust logo size further */
+    }
+
+    /* Pagination */
+    .custom-pagination-btn {
+        padding: 5px 10px;  /* Adjust button padding */
+        font-size: 0.85rem;  /* Adjust font size for mobile */
+    }
+}
+
+
