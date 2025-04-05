@@ -63,37 +63,6 @@ This project contains a simple React application for managing users. The applica
 - Includes Cancel and Yes, Delete buttons.
 - Once Yes, Delete is clicked, the user is permanently deleted.
 
-## Project Structure
-
-
-### Frontend-crud exam (React App)
-
-/frontend-crud-exam
-  ├── /node_modules              # Contains all the dependencies installed via npm
-  ├── /public                    # Static files (index.html, images, etc.)
-  ├── /src
-  │   ├── /components            # Reusable components and page components
-  │   │   ├── index.js          # Entry point for components or aggregate export
-  │   │   ├── Page.js           # Main page component
-  │   │   ├── Page.module.scss  # SCSS styles for Page.js
-  │   │   ├── PageFooter.js     # Footer component
-  │   │   ├── PageMain.js       # Main content of the page
-  │   │   ├── PageMain.module.scss # SCSS styles for PageMain.js
-  │   ├── /Styles               # Global styles
-  │   │   ├── admin.scss        # Admin panel specific styles
-  │   │   ├── main.scss         # General site styles
-  │   │   ├── modal.scss        # Modal related styles (Create, View, Edit, Delete modals)
-  │   │   ├── table.scss        # User table styling
-  │   ├── /views                # Views for different pages
-  │   │   ├── /home
-  │   │   │   └── index.js      # Home page content (Admin info)
-  │   │   ├── /users
-  │   │   │   └── index.js      # User listing page with CRUD actions
-  ├── /App.js                   # Main React component with routing setup
-  ├── /App.test.js              # Tests for the App component
-  ├── /index.js                 # Entry point to the React app
-  ├── /reportWebVitals.js       # Web vitals reporting utility
-  ├── /setupTests.js            # Configuration for Jest testing
 
 ## API Endpoints and Functions
 
@@ -128,8 +97,7 @@ Each of these API calls is implemented with the corresponding HTTP method (GET, 
 
 ## INSTALLATION
 **CLONE THE REPOSITORY**
-- git clone https://github.com/GavinTorres09/frontend-crud-exam.git
-- cd frontend-crud-exam
+-git clone https://github.com/GavinTorres09/CRUD_EXAM.git
 
 **INSTALL DEPENDENCIES**
 - npm install
