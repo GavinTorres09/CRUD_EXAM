@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Card, Spinner } from 'reactstrap';
 import '../../styles/admin.scss'; 
-import ParticlesBackground from '../../components/ParticlesBackground'; // Import the ParticlesBackground component
+
 
 // Move userData outside the component to avoid unnecessary re-creation
 const userData = {
