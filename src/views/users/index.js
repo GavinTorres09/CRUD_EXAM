@@ -205,6 +205,7 @@ const handleAddClick = () => {
 
 /*HTML */
   return (
+
     <Container>
 
       {/* Show loading indicator while data is being fetched */}
@@ -429,6 +430,7 @@ const handleAddClick = () => {
 </>
       )}
     </Container>
+
   );
 }
 

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Card, Spinner } from 'reactstrap';
 import '../../styles/admin.scss'; 
+import ParticlesBackground from '../../components/ParticlesBackground'; // Import the ParticlesBackground component
 
 // Move userData outside the component to avoid unnecessary re-creation
 const userData = {
@@ -23,35 +24,37 @@ function Index() {
   }, []);
 
   return (
-    <Container>
-      {loading ? (
-        <div className="text-center mt-5">
-          <Spinner color="primary" />  {/* Loading spinner */}
-          <h4>Loading user...</h4>
-        </div>
-      ) : (
-        <Card className="profile-card mt-5 p-5">
-          <div className="profile-img-container">
-            <img
-              src={user.profileImage || '/default-avatar.png'}
-              alt="Profile"
-              className="profile-img"
-            />
+ 
+      <Container>
+        {loading ? (
+          <div className="text-center mt-5">
+            <Spinner color="primary" />  {/* Loading spinner */}
+            <h4>Loading user...</h4>
           </div>
-          <h1 className="custom-title">{user.name}</h1>
-          <span className="label">{user.role}</span>
-          <address className="contact-info">
-            <a href={`mailto:${user.email}`} className="contact-link">
-              {user.email}
-            </a>
-            <br />
-            <a href={`tel:${user.phone}`} className="contact-link">
-              {user.phone}
-            </a>
-          </address>
-        </Card>
-      )}
-    </Container>
+        ) : (
+          <Card className="profile-card mt-5 p-5">
+            <div className="profile-img-container">
+              <img
+                src={user.profileImage || '/default-avatar.png'}
+                alt="Profile"
+                className="profile-img"
+              />
+            </div>
+            <h1 className="custom-title">{user.name}</h1>
+            <span className="label">{user.role}</span>
+            <address className="contact-info">
+              <a href={`mailto:${user.email}`} className="contact-link">
+                {user.email}
+              </a>
+              <br />
+              <a href={`tel:${user.phone}`} className="contact-link">
+                {user.phone}
+              </a>
+            </address>
+          </Card>
+        )}
+      </Container>
+    
   );
 }
 
